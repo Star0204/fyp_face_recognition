@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caregiver Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        div { margin-bottom: 15px; }
+        button { margin-right: 10px; }
+        #recordButton { background-color: #4CAF50; color: white; }
+        #stopButton { background-color: #f44336; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Add a New Person</h1>
+    
+    <form id="upload-form">
+        <div>
+            <label for="name">Person's Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div>
+            <label for="file">Photo:</label>
+            <input type="file" id="file" name="file" accept="image/png, image/jpeg" required>
+        </div>
+        
+        <div>
+            <h3>Record Narration:</h3>
+            <button id="recordButton" type="button">Record</button>
+            <button id="stopButton" type="button" disabled>Stop</button>
+            <p id="status">Click 'Record' to start.</p>
+            <audio id="audioPlayback" controls></audio>
+        </div>
+        
+        <hr>
+        
+        <button type="submit">Upload Person</button>
+    </form>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
